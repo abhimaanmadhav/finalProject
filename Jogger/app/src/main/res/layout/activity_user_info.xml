@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="abhimaan.com.jogger.UserInfo.UserInfo">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:paddingEnd="@dimen/activity_horizontal_margin"
+                  android:paddingLeft="@dimen/activity_horizontal_margin"
+                  android:paddingRight="@dimen/activity_horizontal_margin"
+                  android:paddingStart="@dimen/activity_horizontal_margin"
+                  tools:context="abhimaan.com.jogger.UserInfo.UserInfoFragment"
+                  tools:showIn="@layout/activity_user_info">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="98dp"
+            android:hint="@string/name">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/name"
+                android:inputType="text"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/unit"
+            style="@style/Base.Widget.AppCompat.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/user_margin"
+            android:layout_marginTop="@dimen/user_margin"
+            android:contentDescription="@string/units_hint"
+            android:entries="@array/units"
+            android:minHeight="50dp"
+            android:spinnerMode="dropdown"/>
+
+
+        <Button
+            android:id="@+id/save"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/user_margin"
+            android:background="@color/colorAccent"
+            android:contentDescription="@string/save"
+            android:text="@string/save"/>
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

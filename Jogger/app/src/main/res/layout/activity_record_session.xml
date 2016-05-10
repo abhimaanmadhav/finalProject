@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="abhimaan.com.jogger.RecordingSession.RecordSession">
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@color/colorAccent"
+        android:contentDescription="@string/stop"
+        android:text="@string/stop"
+        android:transitionName="@string/distance"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/stop"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/essential_stats_layout"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginBottom="@dimen/default_gap"
+            >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text.record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/distance_coved_text"
+                    android:text="@string/distance_coved_text"/>
+
+                <TextView
+                    android:id="@+id/distance_covered"
+                    style="@style/TextAppearance.AppCompat.Display1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <TextView
+
+                    style="@style/text.record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/avg_speed_text"
+                    android:text="@string/avg_speed_text"/>
+
+                <TextView
+                    android:id="@+id/avg_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/default_gap">
+
+
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/degree"/>
+
+            <TextView
+                style="@style/text.record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/temp"
+                android:layout_marginEnd="@dimen/default_gap"
+                android:layout_marginRight="@dimen/default_gap"
+                android:layout_toLeftOf="@+id/temp_range"
+                android:layout_toStartOf="@+id/temp_range"
+                android:contentDescription="@string/temp"
+                android:text="@string/temp"/>
+
+            <TextView
+                android:id="@+id/temp_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/degree"/>
+
+            <TextView
+                android:id="@+id/humidity_text"
+                style="@style/text.record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/humidity"/>
+
+            <abhimaan.com.jogger.meter.Meter
+                android:id="@+id/humidity"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/humidity_text"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/humidity"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+
+                android:orientation="vertical">
+
+                <TextView
+
+                    style="@style/text.record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/default_gap"
+                    android:contentDescription="@string/start_time"
+                    android:text="@string/start_time"/>
+
+                <TextClock
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/date"
+                    android:format12Hour="hh:mm:ss a\n dd/MM/yy"
+                    android:format24Hour="hh:mm:ss a\n dd/MM/yy"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+
+                    style="@style/text.record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/default_gap"
+                    android:contentDescription="@string/elapsed_time"
+                    android:text="@string/elapsed_time"/>
+
+                <Chronometer
+                    android:id="@+id/stop_watch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/elapsed_time_counter"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

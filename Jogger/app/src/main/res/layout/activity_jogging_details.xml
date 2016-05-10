@@ -1,0 +1,97 @@
+<LinearLayout android:id="@+id/root"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#ffffff"
+              tools:context="abhimaan.com.jogger.JoggingDetails.JoggingDetails">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:contentDescription="@string/app_name"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"></fragment>
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150dp"
+        app:columnCount="2"
+
+        app:rowCount="4">
+
+        <TextView
+            style="@style/gridLayoutHeading"
+            android:contentDescription="@string/distance_coved_text"
+            android:text="@string/distance_coved_text"/>
+
+        <TextView
+            style="@style/gridLayoutHeading"
+            android:contentDescription="@string/avg_speed_text"
+            android:text="@string/avg_speed_text"/>
+
+        <TextView
+            android:transitionName="@string/distance"
+            android:id="@+id/distance_covered"
+            style="@style/gridLayoutHeading"
+            />
+
+        <TextView
+            android:id="@+id/avg_speed"
+            style="@style/gridLayoutHeading"
+            />
+
+        <TextView
+            style="@style/gridLayoutHeading"
+            android:contentDescription="@string/time_taken"
+            android:text="@string/time_taken"/>
+
+        <TextView
+            style="@style/gridLayoutHeading"
+            android:contentDescription="@string/avg_altitude"
+            android:text="@string/avg_altitude"/>
+
+        <TextView
+            android:id="@+id/time_taken"
+            style="@style/gridLayoutHeading"
+            />
+
+        <TextView
+            android:id="@+id/avg_altitude"
+            style="@style/gridLayoutHeading"
+            />
+    </android.support.v7.widget.GridLayout>
+
+    <Button
+        android:id="@+id/share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@color/colorAccent"
+        android:contentDescription="@string/share_intent"
+        android:text="@string/share"/>
+</LinearLayout>

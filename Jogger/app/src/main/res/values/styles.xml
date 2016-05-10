@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="baseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme" parent="baseTheme">
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="button" parent="TextAppearance.AppCompat.Button">
+
+    </style>
+
+    <style name="text.caption" parent="TextAppearance.AppCompat.Caption"/>
+
+    <style name="text.title" parent="TextAppearance.AppCompat.Title"/>
+
+    <style name="text.record" parent="text.title">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text.body" parent="TextAppearance.AppCompat.Body1"/>
+
+    <style name="text.small" parent="TextAppearance.AppCompat.Small"/>
+
+    <style name="text.medium" parent="TextAppearance.AppCompat.Medium"/>
+
+    <style name="gridLayoutHeading">
+        <item name="layout_columnWeight">1</item>
+        <item name="layout_rowWeight">1</item>
+        <item name="android:gravity">center</item>
+
+        <item name="android:textAppearance">@style/text.title</item>
+    </style>
+
+    <style name="gridLayouttext" parent="gridLayoutHeading">
+        <item name="android:textAppearance">@style/text.body</item>
+        <item name="android:background">@drawable/gridbackground</item>
+    </style>
+
+</resources>
